@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="createdir.php" method="post">
+        <h2>Create new Folder</h2>
+        <input type="text" name="createDir">
+        <input type="submit" name="create dictionary" id="">
+    </form>
+    <?php
+    $output_dir = "";
+    $dir_name=$_Post['createDir'];
+
+    if(!file_exists($output_dir,$dir_name));
+    $file_path = "Rohit";
+    if(!rmdir($file_path))
+    echo("could not remove $path");
+?> 
+</body>
+</html>

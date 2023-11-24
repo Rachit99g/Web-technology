@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .bar{
+        width: 100%;
+        height: 50px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content:space-between;
+        background-color: rgba(0, 0, 0, 0.516);
+    }
+    .box{
+        width: 100%;
+        height:350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    .box2{
+        width: 250px;
+        height: 300px;
+        border-radius: 12px;
+        background-color: rgb(179, 179, 244);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.29);
+    display: block;
+    text-align: center;
+    padding: 10px;
+    }
+    .screen{
+        width: 250px;
+        height: 300px;
+        border: 1px solid black;
+        border-radius: 12px;
+    }
+    input[type=text]{
+        width: 200px;
+        height: 25px;
+        border-radius: 12px;
+        border: none;
+        box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.247);
+        text-align: center;
+    }
+    #btn{
+        padding: 5px 20px;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.247);
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        background-color: rgb(164, 232, 164);
+
+    }
+    a{
+        text-decoration: none;
+        font-size: 18px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+    }
+    label{
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        letter-spacing: 1px;
+        color: white;
+    }
+    #create{
+        padding: 5px 20px;
+        border-radius: 12px;
+        border: none;
+        box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.306);
+        color: rgba(0, 0, 0, 0.365);
+    }
+    .items{
+    width: 180px;
+    height: 40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    gap: 30px;
+    padding: 8px 100px;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+p{
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+</style>
+<body>
+    <div class="bar">
+        <h3>Logo</h3>
+    <div class="items">
+        <p>Home</p>
+        <p>Updates</p>
+        <p>Post</p>
+        <p>Serices</p>
+        <a href="card.html"><p>Signin</p></a>
+    </div>
+    </div>
+    <div class="box">
+        <p id="pera1"></p>
+        <div class="box2">
+            <form id="myForm">
+                <label for="inputField">Login form</label><br>
+                <br>
+                <input type="text" id="Name" placeholder="Your Name">
+                <br>
+                <br>
+                <input type="text" id="inputField" maxlength="10" placeholder="enter password">
+                <br>
+                <br>
+                <input type="text" id="inputField2" maxlength="10" placeholder="confirm password">
+                <br>
+                <br>
+                <button id="btn" type="button"  onclick="saveInputData()"><a href="card.html">Login</a></button>
+                <br><br>
+                <p><a href="">Forgot password</a></p>
+                <br><br>
+                <button id="create" type="button" onclick="saveInputData()">Create account</button>
+            </form>
+        </div>
+        </div>
+    </div>
+    <script src="dbms.js"></script>
+    <script>
+        let inputData; // Declare a JavaScript variable to store the input data
+
+        function saveInputData() {
+            const name = document.getElementById("Name");
+            inputName = name.value;
+            if(inputName ==""){
+                alert("Enter Your Name")
+            }
+            else{
+            const inputField = document.getElementById("inputField");
+            const inputField2 = document.getElementById("inputField2");
+            const inputField3 = document.getElementById("inputField3");
+            inputData2 = inputField2.value;
+            inputData = inputField.value; // Get the value from the input field
+            inputdata3 = inputField3.value;
+            alert(inputdata3);
+            if(inputData==""){
+                alert("Enter Your password")
+            }
+            else if(inputData2==""){
+                alert("Confirm your password")
+            }
+            else if(inputData!=inputData2){
+                alert("Wrong password")
+            }
+            else if(inputData==inputData2){
+                saveInputData();
+            }
+            else{
+                alert("Password not match 😒")
+            }
+        }
+    }
+    let inputName = new Array[10];
+    let inputpassword = new Array[10];
+    let inputconfirmpassword = new Array[10];
+    for(let i = 0; i < 10;i++){
+        inputName[i] = inputField;
+    }
+    for(let j = 0; j <10;j++){
+        inputpassword[j] = inputField2;
+    }
+    for(let k = 0;k<10;k++){
+        inputconfirmpassword[k] = inputField3;
+    }
+    document.getElementById('pera1').innerHTML=inputName;
+    document.getElementById('pera1').innerHTML=inputpassword;
+    document.getElementById('pera1').innerHTML=inputconfirmpassword;
+    </script>
+</body>
+</html>

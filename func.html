@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Save Input to JavaScript Variable</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+.container{
+    width: 250px;
+    height: 300px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.29);
+    display: block;
+    text-align: center;
+    padding: 30px;
+}
+</style>
+<body>
+<div class="container">
+    <form id="myForm">
+        <label for="inputField">Login form</label><br>
+        <br>
+        <input type="text" id="Name" placeholder="Your Nmae">
+        <br>
+        <br>
+        <input type="text" id="inputField" maxlength="10" placeholder="enter password">
+        <br>
+        <br>
+        <input type="text" id="inputField2" maxlength="10" placeholder="confirm password">
+        <br>
+        <br>
+        <button type="button" onclick="saveInputData()">Login</button>
+        <br><br>
+        <p><a href="">Forgot password</a></p>
+        <br><br>
+        <button type="button" onclick="saveInputData()">Create account</button>
+        <br><br><input type="email" name="" id="inputField3">
+    </form>
+</div>
+
+    <script>
+        let inputData; // Declare a JavaScript variable to store the input data
+
+        function saveInputData() {
+            const name = document.getElementById("Name");
+            inputName = name.value;
+            if(inputName ==""){
+                alert("Enter Your Name")
+            }
+            else{
+            const inputField = document.getElementById("inputField");
+            const inputField2 = document.getElementById("inputField2");
+            const inputField3 = document.getElementById("inputField3");
+            inputData2 = inputField2.value;
+            inputData = inputField.value; // Get the value from the input field
+            inputdata3 = inputField3.value;
+            alert(inputdata3);
+            if(inputData==""){
+                alert("Enter Your password")
+            }
+            if(inputData2==""){
+                alert("Confirm your password")
+            }
+            else if(inputData==inputData2){
+                alert("True");
+            }
+            alert("Data Saved")
+        }
+        }
+    </script>
+</body>
+</html>

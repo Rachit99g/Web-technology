@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .fade{
+        animation-name: fade;
+        animation-duration: 0.8s;
+    }
+    @keyframes fade {
+        from{opacity: 0.7}
+        to {opacity: 1;}
+    }
+    img{
+        width: 100%;
+        height: 500px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    .box{
+        width: 100%;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-around;
+        margin-top: 25px;
+    }
+    .box2{
+        width: 100%;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    #sb-img1{
+        transition: 0.5s ease;
+        width: 250px;
+        height: 300px;
+        border-radius: 12px;
+    }
+    .sb{
+        width: 250px;
+        height: 300px;
+        border-radius: 12px;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.434);
+
+    }
+    #sb-img1:hover{
+        transform: (1.3);
+    }
+    h3{
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.849);
+        letter-spacing: 2;
+    }
+    .heading{
+        width: auto;
+        padding: 12px;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    .img-container{
+        border-radius: 15px;
+    }
+    .box2{
+        width: 100%;
+        height: 350px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        position: relative;
+        background-image: linear-gradient(to right,rgba(0, 0, 0, 0.18),rgba(0, 0, 0, 0.614));
+    }
+    .box2-1 img{
+        width: 280px;
+        height: 250px;
+        box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.888);
+        position: absolute;
+        left: 10%;
+        top:20%;
+        transition: 0.8s ease;
+        border-radius: 12px;     
+    }
+    .box2-2{
+        position: absolute;
+        width: 310px;
+        height: 200px;
+        border-radius:12px;
+        font-size: 15px;
+        right: 30%;
+        top: 20%;
+        overflow: hidden;
+        text-align: center;
+        letter-spacing: 1px;
+        transition: 0.5s;
+        padding: 8px;
+        text-align: center;
+        color: white;
+        border: 1px solid white;
+    }
+    li{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        padding: 8px;
+    }
+    .box2-2:hover{
+        width: 360px;
+        height: 260px;
+        overflow: visible;
+        letter-spacing: 1.5px;
+    }
+    .box2-1 img:hover{
+        transform: scale(1.1);
+    }
+    button{
+        width: auto;
+        height: auto;
+        padding: 14px 16px;
+        border: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.443);
+        border-radius: 12px;
+        font-size: 15px;
+        letter-spacing: 2px;
+        position: absolute;
+        right: 13%;
+        top: 70%;
+        transition: 0.5s;
+    }
+    button:hover{
+        box-shadow: 2px 2px 2px 2px rgb(192, 228, 243);
+        transform: scale(1.1);
+    }
+    .nav-bar-cont{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content:space-between;
+        background-color: rgba(0, 0, 0, 0.516);
+    }
+.logo h3{
+    width: 60px;
+    height: 30px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 12px;
+    text-align: center;
+    padding: 4px 16px;
+    color: white;
+}
+h3:hover{
+    box-shadow: 2px 2px 2px 2px rgb(202, 229, 240);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.items{
+    width: 180px;
+    height: 40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    gap: 30px;
+    padding: 8px 120px;
+    color: white;
+}
+p{
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.box-b{
+        width: 100%;
+        height: 780px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.614);
+    }
+    #h2{
+        text-align: center;
+        color: white;
+
+    }
+    u{
+        line-height: 0.7px;
+    }
+    .box-a{
+        width: 350px;
+        height: 200px;
+        border-radius: 12px;
+    }
+    #img1{
+        width: 350px;
+        height: 200px;
+        border-radius: 12px;
+    }
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.bottom{
+    width: 100%;
+    height: 400px;
+    border: 1px solid black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.404),rgba(0, 0, 0, 0.637));
+    flex-wrap: wrap;
+}
+.flexi{
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    padding: 8px 0;
+    color: white;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-overflow: ellipsis;
+}
+#h3{
+    text-align: center;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(0, 0, 0, 0.333);
+    font-weight: 400;
+    padding: 15px;
+}
+#para{
+    font-size: 13px;
+    color: white;
+    font-weight: 400;
+}
+.flexi1{
+    width: 400px;
+    height: 80px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    letter-spacing: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#logoes{
+    font-size: 8vh;
+}
+
+</style>
+<body>
+    <div class="nav-bar-cont">
+        <div class="logo">
+            <h3>UDrive</h3>
+        </div>
+        <div class="items">
+            <p>Home</p>
+            <a href=""><p>Updates</p></a>
+            <a href=""><p>Post</p></a>
+            <a href=""><p>Serices</p></a>
+            <a href="login.html"><p>LogOut</p></a>
+        </div>
+    </div>
+    <div class="img-container">
+        <h2 class="info1">
+            <h2></h2>
+        </h2>
+        <div class="img1">
+            <img src="Presentation1.jpg" alt="">
+        </div>
+        <div class="img1">
+            <img src="2024-Chevrolet-Equinox-EV-3RS-1331.jpg" alt="">
+        </div>
+        <div class="img1">
+            <img src="2024_subaru_solterra_002.jpg" alt="">
+        </div>
+    </div>
+    <div class="heading">
+        <h3>Select & Costumize by your Own Style</h3>
+    </div>
+    <!--2nd row box-->
+    <div class="box2">
+        <div class="box2-1">
+            <img  id="single-img" alt="" src="2024_cadillac_celestiq2.jpeg">
+        </div>
+        <div class="box2-2">
+            <li>HANDS-FREE SUPER CRUISE™* AVAILABLE DRIVING ASSISTANCE TECHNOLOGY. TECHNOLOGY.</li>
+            <li>DIAGONAL ADVANCED LED DISPLAY. </li>
+            <li>SINGLE CONTINUOUS SCREEN CAPABLE OF 9K RESOLUTION. INTERIOR</li>
+            <li>CADILLAC SMART SYSTEM* STANDARD SAFETY</li>
+            <li>DRIVER ASSISTANCE FEATURES. SAFETY.</li>
+        </div>
+        <div class="btn">
+            <a href="update.html"><button>More updates -></button></a>
+        </div>
+    </div>
+        
+    <div class="box">
+        <div class="sb">
+            <img id="sb-img1" src="ferrari_499p_modificata_0011.jpg" alt="">
+        </div>
+        <div class="sb">
+            <img id="sb-img1" src="2024_subaru_solterra_002.jpg" alt="">
+        </div>
+        <div class="sb">
+            <img id="sb-img1" src="vinfast_vf3.jpg" alt="">
+        </div>
+    </div>
+    <div class="box2">
+        <div class="box2-1">
+            <img id="single-img" alt="" src="vinfast_vf3.jpg">
+        </div>
+        <div class="box2-2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consectetur dolor amet perferendis excepturi ex! Dolores architecto maxime corrupti atque molestiae quaerat earum quis sapiente optio incidunt praesentium, labore deserunt tempora aliquid eveniet molestias, perferendis eum inventore, beatae soluta non.</p>
+        </div>
+        <div class="btn">
+            <button>Detail</button>
+        </div>
+    </div>
+    <!--boxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+    <div class="box-b">
+        <h2 id="h2">
+            <u>Latest News</u>
+        </h2>
+        <div class="box-a">
+            <a href=""><img id="img1" src="vinfast_vf3.jpg" alt=""></a>
+            <div class="pera">
+                <p id="para">Continue reading 2024 Chevy Equinox EV to start at $34,995, more pricing revealed
+
+                    2024 Chevy Equinox EV to start at $34,995, more pricing revealed originally appeared on Autoblog on Mon, 30 Oct 2023 17:51:00 EDT. Please see our terms for use of feeds..</p>
+        </div>
+            </div>
+        <div class="box-a">
+            <img id="img1" src="2024_cadillac_celestiq2.jpeg" alt="">
+            <div class="pera">
+                <p id="para">Continue reading $975,000 one-of-one 2024 Cadillac Celestiq is on Neiman Marcus' fantasy list
+
+                    $975,000 one-of-one 2024 Cadillac Celestiq is on Neiman Marcus' fantasy list originally appeared on Autoblog on Mon, 30 Oct 2023 14:47:00 EDT. Please see our terms for use of feeds..</p>
+        </div>
+        </div>
+        <div class="box-a">
+            <img id="img1" src="2024-Chevrolet-Equinox-EV-3RS-1331.jpg" alt="">
+            <div class="pera">
+                <p id="para">Continue reading U.S. Vinfast dealers want to sell the battery-electric VF3 minicar here
+
+                    U.S. Vinfast dealers want to sell the battery-electric VF3 minicar here originally appeared on Autoblog on Mon, 30 Oct 2023 16:27:00 EDT. Please see our terms for use of feeds.</p>
+        </div>
+        </div>
+        <div class="box-a">
+            <img id="img1" src="2024_subaru_solterra_002.jpg" alt="">
+            <div class="pera">
+                <p id="para">Continue reading Subaru Solterra brings small, useful changes to Japan Mobility Show
+
+                    Subaru Solterra brings small, useful changes to Japan Mobility Show originally appeared on Autoblog on Mon, 30 Oct 2023 16:52:00 EDT. Please see our terms for use of feeds..</p>
+        </div>
+        </div>
+        <div class="box-a">
+            <img id="img1" src="ferrari_499p_modificata_0011.jpg" alt="">
+            <div class="pera">
+                <p id="para">Continue reading Ferrari 499P Modificata a Le Mans Hypercar is for gentleman racers
+
+                    Ferrari 499P Modificata a Le Mans Hypercar is for gentleman racers originally appeared on Autoblog on Mon, 30 Oct 2023 14:01:00 EDT. Please see our terms for use of feeds..</p>
+        </div>
+        </div>
+    </div>
+    <!--Bottom-->
+    <h3 id="h3">some other information</h3>
+    <div class="bottom">
+        <div class="flexi">
+            <u>HELP</u>
+            <br>
+            <br>
+            <p>Sitemap</p>
+            <br>
+            <p>About Us</p>
+            <br>
+            <p>Add Us To Home Screen</p>
+        </div>
+        <div class="flexi">
+            <u>CONTACT</u>
+            <br>
+            <br>
+            <p>Feedback/Tip Us</p>
+            <br>
+            <p>Licensing</p>
+            <br>
+        </div>
+        <div class="flexi">
+            <u>PODCASTS</u>
+            <br>
+            <br>
+            <p>Audio</p>
+            <br>
+            <p>On iTunes</p>
+            <br>
+            <p>Archieves</p>
+        </div>
+        <div class="flexi">
+            <u>ADVERTISING</u>
+            <br>
+            <br>
+            <p>AboutAds</p>
+            <br>
+            <p>Advertise with us</p>
+            <br>
+            <p>Privacy</p>
+        </div>
+        <div class="flexi">
+            <u>LEGAL</u>
+            <br>
+            <br>
+            <p>Terms and services</p>
+            <br>
+            <p>Privacy Policies</p>
+            <br>
+            <p>Trademarks</p>
+        </div>
+        <div class="flexi1">
+            <p>Follow Us On Plateforms</p>
+            <a id="logoes" href="https://www.instagram.com/cardekhoindia/?hl=en"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a id="logoes" href="https://www.facebook.com/CarDekho/"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a id="logoes" href="https://twitter.com/CarDekho?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><ion-icon name="logo-twitter"></ion-icon>
+            </a>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script>
+        let slideindex = 0;
+        showslides();
+        function showslides(){
+            let i;
+            let slides =document.getElementsByClassName('img1');
+            for(i = 0; i < slides.length;i++){
+                slides[i].style.display = 'none';
+            }
+            slideindex++;
+            if(slideindex>slides.length){
+                slideindex = 1
+            }
+            slides[slideindex-1].style.display='block';
+            setTimeout(showslides,10000);
+        }
+    </script>
+</body>
+</html>
